@@ -3,7 +3,17 @@ import React from 'react'
 
 import '../styles/Card.css'
 
-export default props => 
-    <div className = "card">
+export default (props) => {
 
-    </div>
+    const {name} = props
+
+    return(
+        <div className = "card">
+            <h1>
+                {name}
+            </h1>
+
+            
+        </div>
+    )
+}

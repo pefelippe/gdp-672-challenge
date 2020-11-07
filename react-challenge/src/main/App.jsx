@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-import { Select, FormControl, MenuItem } from '@material-ui/core'
-
 import Header from '../components/Header'
 
 import CardContainer from '../components/CardContainer'
 
 import Footer from '../components/Footer'
 
-import Aside from '../components/Aside';
+import Dropdown from '../components/Dropdown';
+
+
+import 'fontsource-montserrat/latin.css'
 
 import'./App.css'
 
@@ -17,7 +18,6 @@ function App () {
     const [countries, setCountries] = useState([]);
     const [country, setCountry] = useState(['world']);
     
-    // The code inside here run once when the component loads 
     useEffect(() => {
 
         const getCountries = async () => {
@@ -33,35 +33,25 @@ function App () {
             });
         };
 
-        getCountries();
+        getCountries();   
 
     }, []);
-
 
     const onCountryChange = async (e) => {
         const countryCode = e.target.value;
         setCountry(countryCode)
-    }
+    };
 
     return (
-        <div className="app">
-            
-            {/* <div className="app__header ">
-                <FormControl className="app_dropdown">
-                <Select variant="outlined" value={country} onChange={onCountryChange}>
-                <MenuItem value = "world"> Worldwide </MenuItem>
-                {countries.map(country => <MenuItem value = {country.value}> {country.name} </MenuItem>)}
-                </Select>
-                </FormControl>
-            </div> */}
-
+            <div className="app">
             <Header />
-            <Aside />
-            <CardContainer />
+            <Dropdown countries = {countries} country = {country} onCountryChange = {onCountryChange} />
+            <CardContainer countries = {countries} country = {country}/>
             <Footer />
-
         </div>
     )
+    
 }
 
 export default App
+

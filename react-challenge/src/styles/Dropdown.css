@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown {
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    
+}
