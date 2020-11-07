@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/gdp-672-challenge/static/css/main.4fa8da9e.chunk.css",
+    "main.js": "/gdp-672-challenge/static/js/main.c489d6ba.chunk.js",
+    "main.js.map": "/gdp-672-challenge/static/js/main.c489d6ba.chunk.js.map",
+    "runtime-main.js": "/gdp-672-challenge/static/js/runtime-main.b74c1e72.js",
+    "runtime-main.js.map": "/gdp-672-challenge/static/js/runtime-main.b74c1e72.js.map",
+    "static/css/2.003d7aae.chunk.css": "/gdp-672-challenge/static/css/2.003d7aae.chunk.css",
+    "static/js/2.6973de79.chunk.js": "/gdp-672-challenge/static/js/2.6973de79.chunk.js",
+    "static/js/2.6973de79.chunk.js.map": "/gdp-672-challenge/static/js/2.6973de79.chunk.js.map",
+    "index.html": "/gdp-672-challenge/index.html",
+    "static/css/2.003d7aae.chunk.css.map": "/gdp-672-challenge/static/css/2.003d7aae.chunk.css.map",
+    "static/css/main.4fa8da9e.chunk.css.map": "/gdp-672-challenge/static/css/main.4fa8da9e.chunk.css.map",
+    "static/js/2.6973de79.chunk.js.LICENSE.txt": "/gdp-672-challenge/static/js/2.6973de79.chunk.js.LICENSE.txt",
+    "static/media/latin.css": "/gdp-672-challenge/static/media/montserrat-latin-900-normal.e66c7edc.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b74c1e72.js",
+    "static/css/2.003d7aae.chunk.css",
+    "static/js/2.6973de79.chunk.js",
+    "static/css/main.4fa8da9e.chunk.css",
+    "static/js/main.c489d6ba.chunk.js"
+  ]
+}
