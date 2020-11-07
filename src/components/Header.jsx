@@ -2,7 +2,12 @@ import React from 'react'
 
 import '../styles/Header.css'
 
-export default props =>
-    <header className="header">
-        <h1>Covid Status</h1>
-    </header>
+const Header = () => {
+    return(
+        <header className="header">
+            <h1>Covid-19 Status</h1>
+        </header>
+    )
+}
+
+export default Header;

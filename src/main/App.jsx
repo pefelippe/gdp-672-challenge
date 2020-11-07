@@ -1,56 +1,99 @@
 import React, { useEffect, useState } from "react";
 
-import Header from '../components/Header'
+import Header from '../components/Header';
 
-import CardContainer from '../components/CardContainer'
+import CardContainer from '../components/CardContainer';
 
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
 import Dropdown from '../components/Dropdown';
 
+import 'fontsource-montserrat/latin.css';
 
-import 'fontsource-montserrat/latin.css'
+import './App.css';
 
-import'./App.css'
+const urlSummary = "https://api.covid19api.com/summary";
+
+const urlCountries = "https://api.covid19api.com/countries";
 
 function App () {
     
-    const [countries, setCountries] = useState([]);
-    const [country, setCountry] = useState(['world']);
+    const [country, setCountry] = useState('world');
     
+    const [countries, setCountries] = useState([]);
+    
+    const [cases, setCases] = useState([]);
+
+
+    const onCountryChange = async (e) => {
+        const countryCode = e.target.value;
+        setCountry(countryCode);
+    };
+
     useEffect(() => {
 
+        const getCases = async () => {
+
+            await fetch(urlSummary)
+            .then(response => response.json())
+            .then (data => 
+                {
+                    let countryPicker;
+
+                    if (country === "world") {
+                        countryPicker = data.Global
+                    }
+
+                    else {
+                        for (var i in data.Countries) {
+                            let picker = data.Countries[i]
+
+                            if (picker.CountryCode === country){
+                                countryPicker = picker;
+                            }
+                            
+                        }
+
+                        if (!countryPicker) return;
+                    }
+
+                    const cases = 
+                    {
+                        TotalConfirmed: countryPicker.TotalConfirmed,
+                        TotalDeaths: countryPicker.TotalDeaths,
+                        TotalRecovered: countryPicker.TotalRecovered
+                    }
+
+                    setCases(cases)
+                });
+            }
+            getCases();
+    }, [country]);
+
+    useEffect(() => {
         const getCountries = async () => {
-            await fetch("https://api.covid19api.com/countries")
+            await fetch(urlCountries)
             .then(response => response.json())
             .then(data => {
                 const countries = data.map(country => ({
                     name: country.Country,
                     value: country.ISO2
-                }))
-                countries.sort((a, b) => a.name.localeCompare(b.name)) // alphabetically sort countries
+                }));
+                countries.sort((a, b) => a.name.localeCompare(b.name)); // alphabetically sort countries
                 setCountries(countries); 
             });
         };
-
-        getCountries();   
-
+        getCountries();
     }, []);
-
-    const onCountryChange = async (e) => {
-        const countryCode = e.target.value;
-        setCountry(countryCode)
-    };
 
     return (
             <div className="app">
             <Header />
             <Dropdown countries = {countries} country = {country} onCountryChange = {onCountryChange} />
-            <CardContainer countries = {countries} country = {country}/>
+            <CardContainer caseInfo = {cases}/>
             <Footer />
         </div>
     )
-    
 }
 
 export default App
