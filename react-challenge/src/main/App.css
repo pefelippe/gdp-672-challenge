@@ -1,0 +1,85 @@
+:root {
+  --bg-dark: #1A2F3A;
+  --header-height: 100px;
+  --footer-height: 20px;
+  --shadow:
+      0 2px 23px 0 rgba(0, 0, 0, 0.1),
+      0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'sans-serif';
+  }
+
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 0.8fr 0.3fr;
+    grid-template-rows: 
+      var(--header-height) 
+      1fr
+      var(--footer-height);
+    grid-template-areas: 
+      "header header"
+      "cardContainer aside"
+      "footer footer";
+      height: 100vh;
+      background-color: #fff;
+  }
+
+header.header {
+  grid-area: header;
+}
+
+.cardContainer {
+  grid-area: cardContainer;
+}
+
+aside.aside {
+  grid-area: aside;
+}
+
+footer.footer {
+  grid-area: footer;
+}
+
+/* .app__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+} */
+
+@media(max-width: 768px) {
+  .app {
+    grid-template-rows: 
+      var(--header-height)
+      1fr
+      1fr
+      var(--footer-height);
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "header"
+      "aside"
+      "cardContainer"
+      "footer";
+  }
+}
+
+@media (max-width: 576px) {
+  .app {
+    grid-template-rows:
+      var(--logo-height)
+      0.3fr
+      1fr
+      var(--footer-height);
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "aside"
+    "cardContainer"
+    "footer";
+  }
+}
