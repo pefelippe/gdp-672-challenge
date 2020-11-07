@@ -16,7 +16,8 @@ const Cards = (props) => {
                 {name}
             </h1>
             <h2>
-                {Number}
+                {Number && <CountUp
+                end = {Number}/>}
             </h2>
             
         </div>
