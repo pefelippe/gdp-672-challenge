@@ -1,0 +1,10 @@
+.picker {
+    display: flex;
+}
+
+.datePicker {
+    display: flex;
+    align-items: center;
+    
+    
+}

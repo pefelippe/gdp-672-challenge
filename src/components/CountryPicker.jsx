@@ -3,7 +3,7 @@ import React from 'react'
 
 import { Select, FormControl, MenuItem } from '@material-ui/core'
 
-import '../styles/Dropdown.css'
+import '../styles/CountryPicker.css'
 
 const Dropdown = (props) => {
 

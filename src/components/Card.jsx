@@ -7,7 +7,7 @@ import CountUp from 'react-countup';
 
 const Cards = (props) => {
     
-    const {name, Number} = props
+    let {name, Number} = props
 
     return(
 
@@ -17,11 +17,11 @@ const Cards = (props) => {
             </h1>
             <h2>
                 {Number && <CountUp
+                separator=" "
                 end = {Number}/>}
             </h2>
-            
         </div>
     )
 }
 
-export default Cards
+export default Cards;
