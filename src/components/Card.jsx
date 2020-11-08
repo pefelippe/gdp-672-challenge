@@ -5,23 +5,20 @@ import '../styles/Card.css'
 
 import CountUp from 'react-countup';
 
-const Cards = (props) => {
-    
-    let {name, Number} = props
+export default function Cards(props) {
 
-    return(
+    let { name, Number } = props
 
-        <div className = "card">
-            <h1>
-                {name}
-            </h1>
+    return (
+        <div className="card">
+            <h1>{name}</h1>
             <h2>
-                {Number && <CountUp
-                separator=" "
-                end = {Number}/>}
+                {Number && 
+                <CountUp
+                    separator="."
+                    end={Number} />
+                }
             </h2>
         </div>
     )
 }
-
-export default Cards;

@@ -3,7 +3,7 @@ import React from 'react'
 
 import '../styles/Footer.css'
 
-const Footer = () => {
+export default function Footer() {
     return (
         <footer className="footer">
             <span>
@@ -12,4 +12,3 @@ const Footer = () => {
         </footer>
     )
 }
-export default Footer
