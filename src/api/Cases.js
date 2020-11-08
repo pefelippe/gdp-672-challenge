@@ -3,18 +3,13 @@
 
 export default async function Api(countriesDict, countryCode, setCases, startDate, endDate) {
 
-    let url = 'https://api.covid19api.com/world/total';
+    let url = `https://api.covid19api.com/world`;
 
     let countryPicked;
 
-    /// ARRUMAAAAAAAAAAAAAR
-    // let startDate2 = "2020-01-01T00:00:00";
-
-    // let endDate2 = "2020-11-08T00:00:00";
-
     if (countryCode !== "world") {
         countryPicked = countriesDict[countryCode]
-        url = `https://api.covid19api.com/total/country/${countryPicked}?from=${startDate}Z&to=${endDate}Z`
+        url = `https://api.covid19api.com/country/${countryPicked}?from=${startDate}&to=${endDate}`
     }
 
     await fetch(url)
@@ -44,7 +39,5 @@ export default async function Api(countriesDict, countryCode, setCases, startDat
             catch (error) {
                 console.log(error)
             }
-
         });
-
 }

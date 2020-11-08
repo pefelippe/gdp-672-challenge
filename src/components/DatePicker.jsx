@@ -1,5 +1,5 @@
 import 'date-fns';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -11,26 +11,48 @@ import {
 import moment from "moment";
 
 export default function MaterialUIPickers(props) {
-  
-  const {selectedDate, setSelectedDate, selectTime, setSelectTime} = props
+
+  const setPeriod = props.setPeriod
+
+  const [selectedDate, setSelectedDate] = useState(props.dateDefault);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+    console.log("date", date);
   };
 
-  const handleTimeChange = (time) => {
-    var seconds = time.getSeconds();
-    var minutes = time.getMinutes();
-    var hour = time.getHours();
+  const parseDate = (data => {
+    data = data.toString()
+    return (data.length == 1) ? '0' + data : data
+  })
 
-    var year = time.getFullYear();
-    var month = time.getMonth(); // beware: January = 0; February = 1, etc.
-    var day = time.getDate();
+  const handlePeriod = () => {
 
-    selectTime = `${year}-${month}-${day}-T${hour}:${minutes}:${seconds}Z`
-    console.log(selectTime)
-    setSelectTime(selectTime)
-  } 
+    if (!selectedDate) return;
+
+    var seconds = parseDate(selectedDate.getSeconds());
+
+    var minutes = parseDate(selectedDate.getMinutes());
+
+    var hour = parseDate(selectedDate.getHours());
+
+    var year = parseDate(selectedDate.getFullYear());
+    var month = parseDate(selectedDate.getMonth());
+    var day = parseDate(selectedDate.getDate());
+
+    let period = `${year}-${month}-${day}T${hour}:${minutes}:${seconds}Z` // tenho que mandar para a requisição
+
+    return period;
+  }
+
+  useEffect(() => {
+    const getPeriod = async () => {
+      const newPeriod = handlePeriod();
+      setPeriod(newPeriod);
+    }
+    getPeriod()
+  }, [selectedDate])
+
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -49,11 +71,11 @@ export default function MaterialUIPickers(props) {
             'aria-label': 'change date',
           }}
         />
-        <KeyboardTimePicker 
-         variant="inline"
-         value={selectTime}
-         onChange={handleTimeChange}
-         />
+        <KeyboardTimePicker
+          variant="inline"
+          value={selectedDate}
+          onChange={handleDateChange}
+        />
       </Grid>
     </MuiPickersUtilsProvider>
   );

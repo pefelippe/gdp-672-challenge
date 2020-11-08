@@ -9,16 +9,17 @@ import Cases from '../api/Cases'
 
 export default function CardContainer(props) {
 
-    const { countryCode, countriesDict, startDate, endDate } = props;
+    const { countryCode, countriesDict, periodStart, periodEnd } = props;
 
     const [cases, setCases] = useState([]);
 
     useEffect(() => {
         const getCases = async () => {
-            Cases(countriesDict, countryCode, setCases, startDate, endDate)
+            Cases(countriesDict, countryCode, setCases, periodStart, periodEnd)
+
         }
         getCases();
-    }, [countryCode]);
+    }, [countryCode, periodStart, periodEnd]);
 
     return (
         <div className="cardContainer">

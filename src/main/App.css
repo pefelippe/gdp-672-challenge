@@ -1,10 +1,6 @@
 :root {
-  --bg-dark: #1A2F3A;
   --header-height: 100px;
   --footer-height: 20px;
-  --shadow:
-      0 2px 23px 0 rgba(0, 0, 0, 0.1),
-      0 2px 49px 0 rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -13,56 +9,50 @@
     border: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', 'sans-serif';
-  }
-
+}
 
 .header {
   grid-area: header;
 }
 
-.cardContainer {
-  grid-area: cardContainer;
-}
-
-.picker {
-  grid-area: picker;
+.content {
+  grid-area: content;
 }
 
 .footer {
   grid-area: footer;
-  }
+}
+
+.card{
+  grid-area: card;
+}
 
 .app {
   margin: 0px;
   display: grid;
   height: 100vh;
-  background-color: #131511;
+  background-color: #fff;
   grid-template-columns: 1fr;
   grid-template-rows: 
     var(--header-height)
-    0.05fr
-    0.95fr
+    1fr
     var(--footer-height);
   grid-template-areas: 
     "header"
-    "picker"
-    "cardContainer"
+    "content"
     "footer";
   }
-
 
 @media(max-width: 768px) {
   .app {
     grid-template-rows: 
       var(--header-height)
       1fr
-      1fr
       var(--footer-height);
       grid-template-columns: 1fr;
       grid-template-areas: 
       "header"
-      "picker"
-      "cardContainer"
+      "content"
       "footer";
   }
 }
@@ -71,14 +61,12 @@
   .app {
     grid-template-rows:
       var(--logo-height)
-      0.3fr
       1fr
       var(--footer-height);
     grid-template-columns: 100%;
     grid-template-areas:
     "header"
-    "picker"
-    "cardContainer"
+    "content"
     "footer";
   }
 }

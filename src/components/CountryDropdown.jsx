@@ -21,7 +21,7 @@ export default function Dropdown(props) {
     }
 
     return (
-        <div className="container ">
+        <div className="countryDropdown ">
             <FormControl className="dropdown">
                 <Select variant="outlined" value={country} onChange={onCountryChange}>
                     <MenuItem key="world" value="world"> Worldwide </MenuItem>

@@ -13,10 +13,10 @@ export default function Cards(props) {
         <div className="card">
             <h1>{name}</h1>
             <h2>
-                {Number && 
-                <CountUp
-                    separator="."
-                    end={Number} />
+                {Number &&
+                    <CountUp
+                        separator="."
+                        end={Number} />
                 }
             </h2>
         </div>

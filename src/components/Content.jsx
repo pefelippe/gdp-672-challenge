@@ -17,26 +17,36 @@ export default function Main() {
 
     const [countriesDict, setCountriesDict] = useState()
 
-    const [startDate, setStartDate] = useState(new Date('2020-01-01T00:00:00'))
+    const [periodStart, setPeriodStart] = useState('0')
 
-    const [endDate, setEndDate] = useState(new Date('2020-11-08T21:11:54'))
+    const [periodEnd, setPeriodEnd] = useState('2020-11-08T21:11:54')
 
+    let startDate = new Date('Jan 01 2020 00:00:00')
+
+    let endDate = new Date('2020-11-08T00:00:00')
+    
     // Get All Countries from API
     useEffect(() => {
         const getCountries = async () => {
             CountriesList(setCountriesDict)
         };
         getCountries();
+
     }, []);
 
     return (
-        <div className="picker">
-            <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode = {setCountryCode}/>
-            <div className="datePickers">
-                <DatePicker label="from" selectedDate={startDate} setSelectedDate={setStartDate} />
-                <DatePicker label="to" selectedDate={endDate} setSelectedDate={setEndDate} />
-            </div>
-            <CardContainer countryCode={countryCode} countriesDict={countriesDict} startDate={startDate} endDate = {endDate} />
+        <div className="content">
+            <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode={setCountryCode} />
+
+            <DatePicker label="from"
+                dateDefault={startDate}
+                setPeriod={setPeriodStart} />
+
+            <DatePicker label="to"
+                dateDefault={endDate}
+                setPeriod={setPeriodEnd} />
+
+            <CardContainer countryCode={countryCode} countriesDict={countriesDict} periodStart={periodStart} periodEnd={periodEnd} />
         </div>
     )
 }
