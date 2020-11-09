@@ -1,27 +1,31 @@
 .content {
     justify-content: space-around;
     box-sizing: border-box;
-    display: grid;
+    /* display: grid; */
     height: 85%;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr;
     grid-template-rows: 
       1fr;
     grid-template-areas: 
       "countryDropdown"
       "cardContainer"
-      "datepickers"
+      "datepickers" */
+}
+
+div.cardCardCountainer {
+  height: 60%;
 }
 
 .cardContainer {
-  height: 70%;
+  height: 100%;
   width: 100%;
-  grid-area: cardContainer;
+  /* grid-area: cardContainer; */
 }
 
 .countryDropdown {
-    height: 10%;
+    height: 20%;
     width: 100%;
-    grid-area: countryDropdown;
+    /* grid-area: countryDropdown; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,8 +33,8 @@
 
 .datepickers {
 
-    grid-area: datepickers;
-    margin: 20px;
+    /* grid-area: datepickers; */
+    margin:  0px 20px;
     padding: 0px 10px 10px 10px;
     display: flex; 
     align-items: center;

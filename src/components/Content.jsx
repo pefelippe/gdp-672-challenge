@@ -39,7 +39,7 @@ export default function Main() {
             <div className="countryDropdown">
                 <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode={setCountryCode} />
             </div>
-            <div >
+            <div className="cardCardCountainer">
                 <CardContainer countryCode={countryCode} countriesDict={countriesDict} periodStart={periodStart} periodEnd={periodEnd} className="cardContainer"/>
             </div>
             <div className="datepickers">
