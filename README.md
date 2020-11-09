@@ -1,4 +1,4 @@
-# :mask: Covid-19 Status :mask:
+# Covid-19 Status :mask:
 
 Hi! this is a simple challenge for the #GDP-672 and #GDP-671 job positions at Instituto Atlântico. This challenge consists of reproducing data from a <a href= "https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#intro">public API</a> on a ReactJS web app.
 
@@ -11,7 +11,7 @@ You are able to specify by a <b>specific Country</b> or view <b>Worldwide</b>.
 
 In addition, you should be able to choose a <b>specific time interval</b>.
 
-<b><p align="center">Don't forget to check on <a href="https://pefelippe.github.io/gdp-672-challenge/">Github Pages</a>.<p></b>
+<b>Don't forget to check on <a href="https://pefelippe.github.io/gdp-672-challenge/">Github Pages</a>.</b>
 
 ## You will find
 - React
