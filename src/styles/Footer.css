@@ -1,13 +1,13 @@
 footer.footer {
+    height: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 auto;
-    background-color: #FFF;
+    color: #fff;
+    background-color: #10130a;
     box-shadow: var(--shadow);
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+
+
+    
 }

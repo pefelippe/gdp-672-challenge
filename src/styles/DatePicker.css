@@ -1,4 +1,6 @@
-.DatePicker {
-
-    background-color: blue;
+.muiPicker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
 }

@@ -3,7 +3,7 @@
 
 export default async function Api(countriesDict, countryCode, setCases, startDate, endDate) {
 
-    let url = `https://api.covid19api.com/world`;
+    let url = `https://api.covid19api.com/world/total`;
 
     let countryPicked;
 
@@ -16,6 +16,7 @@ export default async function Api(countriesDict, countryCode, setCases, startDat
         .then(response => response.json())
         .then(data => {
             try {
+                console.log(data)
                 let cases;
                 let lastData;
                 if ((countryCode === "world")) {

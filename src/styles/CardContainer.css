@@ -1,7 +1,20 @@
 .cardContainer {
-    
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
+
+@media(max-width: 974px) {
+    .cardContainer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+  
+@media(max-width: 576px) {
+    .cardContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+  

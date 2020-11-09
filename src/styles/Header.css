@@ -1,10 +1,17 @@
 header.header {
-    font-size: 1.8em;
+    height: 10%;
+    font-size: 1.4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    color: #F64668;
+    color:#D22C2C;
     background-color: #10130a;
     box-shadow: var(--shadow);
+}
+
+@media(max-width: 974px) {
+    header.header{
+        font-size: 0.9em;
+        width: 100%;
+    }
 }

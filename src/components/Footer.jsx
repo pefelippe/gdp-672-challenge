@@ -7,7 +7,7 @@ export default function Footer() {
     return (
         <footer className="footer">
             <span>
-                Wear a Mask. Save a life.
+                Wear a <b>Mask</b>. Save a <b>life</b>.
             </span>
         </footer>
     )

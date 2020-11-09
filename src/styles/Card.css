@@ -1,15 +1,39 @@
 .card {
-    width: 250px;
+    margin-bottom: 10px;
+    width: 300px;
     height: 250px;
     background-color: #fff;
+    display: flex;
     text-align: center;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
 
-h1 {
-    text-align: center;
+.type {
+    padding: 15px;
+    font-size: 35px;
 }
 
-h2 {
-    text-align: center;
+.numberCases {
+    font-size: 30px;
+
 }
+
+.description {
+    font-size: 10px;
+    color: 	#808080;
+}
+
+@media(max-width: 974px) {
+    .type {
+        padding: 10px;
+        font-size: 25px;
+    }
+    .numberCases {
+        font-size: 20px;
+
+    }
+  }
+  

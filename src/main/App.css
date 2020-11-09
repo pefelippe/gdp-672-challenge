@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     font-family: 'Montserrat', 'sans-serif';
 }
 
@@ -23,16 +23,15 @@
   grid-area: footer;
 }
 
-.card{
+.card {
   grid-area: card;
 }
 
 .app {
+  height: 100%;
   margin: 0px;
-  display: grid;
-  height: 100vh;
-  background-color: #fff;
-  grid-template-columns: 1fr;
+  background-color: #2D2F34;
+  grid-template-columns: 100%;
   grid-template-rows: 
     var(--header-height)
     1fr
@@ -43,13 +42,14 @@
     "footer";
   }
 
-@media(max-width: 768px) {
+@media(max-width: 974px) {
   .app {
+    height: auto;
     grid-template-rows: 
       var(--header-height)
       1fr
       var(--footer-height);
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       grid-template-areas: 
       "header"
       "content"

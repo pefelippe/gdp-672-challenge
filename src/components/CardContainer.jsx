@@ -23,9 +23,9 @@ export default function CardContainer(props) {
 
     return (
         <div className="cardContainer">
-            <Card name="Confirmed" Number={cases.TotalConfirmed} />
-            <Card name="Recovered" Number={cases.TotalRecovered} />
-            <Card name="Deaths" Number={cases.TotalDeaths} />
+            <Card name="Confirmed" Number={cases.TotalConfirmed} label = "Number of infected by covid-19"/>
+            <Card name="Recovered" Number={cases.TotalRecovered} label = "Number of recovered from covid-19"/>
+            <Card name="Deaths" Number={cases.TotalDeaths} label = "Number of deaths caused by covid-19"/>
         </div>
     )
 }

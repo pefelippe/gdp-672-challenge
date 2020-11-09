@@ -55,9 +55,9 @@ export default function MaterialUIPickers(props) {
 
 
   return (
-    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container justify="space-around">
-        <KeyboardDatePicker
+    <MuiPickersUtilsProvider utils={DateFnsUtils} >
+      <Grid container direction="column" align-items-xs-center>
+        <KeyboardDatePicker 
           disableToolbar
           variant="inline"
           format="MM-dd-yyyy"

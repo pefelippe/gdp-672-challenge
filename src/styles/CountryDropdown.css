@@ -5,9 +5,15 @@
 }
 
 .dropdown {
-    width: 300px;
+    width: 70%;
     background-color: #fff;
     display: flex;
     justify-content: center;
     
+}
+
+@media(max-width: 974px) {
+    .dropdown {
+        height: 70%;
+    }
 }

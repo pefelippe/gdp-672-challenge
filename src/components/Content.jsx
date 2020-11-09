@@ -24,7 +24,7 @@ export default function Main() {
     let startDate = new Date('Jan 01 2020 00:00:00')
 
     let endDate = new Date('2020-11-08T00:00:00')
-    
+
     // Get All Countries from API
     useEffect(() => {
         const getCountries = async () => {
@@ -36,17 +36,20 @@ export default function Main() {
 
     return (
         <div className="content">
-            <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode={setCountryCode} />
-
-            <DatePicker label="from"
-                dateDefault={startDate}
-                setPeriod={setPeriodStart} />
-
-            <DatePicker label="to"
-                dateDefault={endDate}
-                setPeriod={setPeriodEnd} />
-
-            <CardContainer countryCode={countryCode} countriesDict={countriesDict} periodStart={periodStart} periodEnd={periodEnd} />
+            <div className="countryDropdown">
+                <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode={setCountryCode} />
+            </div>
+            <div >
+                <CardContainer countryCode={countryCode} countriesDict={countriesDict} periodStart={periodStart} periodEnd={periodEnd} className="cardContainer"/>
+            </div>
+            <div className="datepickers">
+                <DatePicker label="Start"
+                    dateDefault={startDate}
+                    setPeriod={setPeriodStart} />
+                <DatePicker label="End"
+                    dateDefault={endDate}
+                    setPeriod={setPeriodEnd} />
+            </div>
         </div>
     )
 }
