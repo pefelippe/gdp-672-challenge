@@ -1,59 +1,24 @@
 .content {
-    justify-content: space-around;
-    box-sizing: border-box;
-    /* display: grid; */
-    height: 85%;
-    /* grid-template-columns: 1fr;
-    grid-template-rows: 
-      1fr;
-    grid-template-areas: 
-      "countryDropdown"
-      "cardContainer"
-      "datepickers" */
+  height: 85%;
 }
 
-div.cardCardCountainer {
+div.cardContainer {
   height: 60%;
 }
 
-.cardContainer {
-  height: 100%;
+div.countryDropdown {
+  height: 20%;
   width: 100%;
-  /* grid-area: cardContainer; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.countryDropdown {
-    height: 20%;
-    width: 100%;
-    /* grid-area: countryDropdown; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+div.datePicker {
+  margin: 10px 20px 10px 20px;
+  padding: 0px 10px 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
 }
-
-.datepickers {
-
-    /* grid-area: datepickers; */
-    margin:  0px 20px;
-    padding: 0px 10px 10px 10px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-
-@media(max-width: 974px) {
-    .app {
-      grid-template-rows: 
-        var(--header-height)
-        1fr
-        var(--footer-height);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "header"
-        "countryDropdown"
-        "footer";
-    }
-  }
-  

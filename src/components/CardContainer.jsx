@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 
 import Card from '../components/Card';
 
-import '../styles/CardContainer.css';
-
 import Cases from '../api/Cases'
+
+import '../styles/CardContainer.css';
 
 export default function CardContainer(props) {
 
@@ -21,11 +21,13 @@ export default function CardContainer(props) {
         getCases();
     }, [countryCode, periodStart, periodEnd]);
 
+    const checkCountry = countryCode == "world" ? "Worldwide" : countriesDict[countryCode]
+    
     return (
         <div className="cardContainer">
-            <Card name="Confirmed" Number={cases.TotalConfirmed} label = "Number of infected by covid-19"/>
-            <Card name="Recovered" Number={cases.TotalRecovered} label = "Number of recovered from covid-19"/>
-            <Card name="Deaths" Number={cases.TotalDeaths} label = "Number of deaths caused by covid-19"/>
+            <Card name="Confirmed" Number={cases.TotalConfirmed} label="Number of infected by covid-19" country = {checkCountry} />
+            <Card name="Recovered" Number={cases.TotalRecovered} label="Number of recovered from covid-19" country = {checkCountry}/>
+            <Card name="Deaths" Number={cases.TotalDeaths} label="Number of deaths caused by covid-19" country = {checkCountry }/>
         </div>
     )
 }

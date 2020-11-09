@@ -14,11 +14,12 @@ export default function MaterialUIPickers(props) {
 
   const setPeriod = props.setPeriod
 
+  const id = props.id
+
   const [selectedDate, setSelectedDate] = useState(props.dateDefault);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    console.log("date", date);
   };
 
   const parseDate = (data => {
@@ -56,13 +57,12 @@ export default function MaterialUIPickers(props) {
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils} >
-      <Grid container direction="column" align-items-xs-center>
-        <KeyboardDatePicker 
+      <Grid container direction="column" >
+        <KeyboardDatePicker
           disableToolbar
-          variant="inline"
           format="MM-dd-yyyy"
           margin="normal"
-          id="date-picker-inline"
+          id={id}
           label={props.label}
           value={selectedDate}
           maxDate={moment()}
@@ -72,7 +72,6 @@ export default function MaterialUIPickers(props) {
           }}
         />
         <KeyboardTimePicker
-          variant="inline"
           value={selectedDate}
           onChange={handleDateChange}
         />

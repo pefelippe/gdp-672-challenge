@@ -1,17 +1,15 @@
-header.header {
+.header {
     height: 10%;
-    font-size: 1.4em;
     display: flex;
+    font-size: 1.5em;
     justify-content: center;
     align-items: center;
-    color:#D22C2C;
+    color: #fff;
     background-color: #10130a;
-    box-shadow: var(--shadow);
 }
 
 @media(max-width: 974px) {
-    header.header{
-        font-size: 0.9em;
-        width: 100%;
+    .header {
+        margin-bottom: 10px;
     }
 }

@@ -37,18 +37,14 @@ export default function Main() {
     return (
         <div className="content">
             <div className="countryDropdown">
-                <CountryDropdown countriesDict={countriesDict} country={countryCode} setCountryCode={setCountryCode} />
+                <CountryDropdown countriesDict = {countriesDict} country = {countryCode} setCountryCode = {setCountryCode} />
             </div>
-            <div className="cardCardCountainer">
-                <CardContainer countryCode={countryCode} countriesDict={countriesDict} periodStart={periodStart} periodEnd={periodEnd} className="cardContainer"/>
+            <div className="cardContainer">
+                <CardContainer countryCode = {countryCode} countriesDict = {countriesDict} periodStart = {periodStart} periodEnd = {periodEnd}  />
             </div>
-            <div className="datepickers">
-                <DatePicker label="Start"
-                    dateDefault={startDate}
-                    setPeriod={setPeriodStart} />
-                <DatePicker label="End"
-                    dateDefault={endDate}
-                    setPeriod={setPeriodEnd} />
+            <div className="datePicker">
+                <DatePicker  label="Start"dateDefault = { startDate } setPeriod = { setPeriodStart } className="startDatePicker" />
+                <DatePicker label="End"  dateDefault = { endDate } setPeriod = { setPeriodEnd } />
             </div>
         </div>
     )

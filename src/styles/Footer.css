@@ -3,11 +3,7 @@ footer.footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 auto;
     color: #fff;
     background-color: #10130a;
     box-shadow: var(--shadow);
-
-
-    
 }

@@ -1,7 +1,10 @@
 .cardContainer {
+
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
+    width: 100%;
 }
 
 @media(max-width: 974px) {
@@ -10,11 +13,3 @@
         justify-content: space-around;
     }
 }
-  
-@media(max-width: 576px) {
-    .cardContainer {
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-  

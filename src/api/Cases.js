@@ -10,6 +10,7 @@ export default async function Api(countriesDict, countryCode, setCases, startDat
     if (countryCode !== "world") {
         countryPicked = countriesDict[countryCode]
         url = `https://api.covid19api.com/country/${countryPicked}?from=${startDate}&to=${endDate}`
+        console.log(url)
     }
 
     await fetch(url)
@@ -38,7 +39,11 @@ export default async function Api(countriesDict, countryCode, setCases, startDat
                 setCases(cases)
             }
             catch (error) {
-                console.log(error)
-            }
-        });
+                const cases = {
+                    TotalConfirmed: 0,
+                    TotalDeaths: 0,
+                    TotalRecovered: 0
+                }
+                setCases(cases);
+        }})
 }

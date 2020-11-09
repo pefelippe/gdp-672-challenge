@@ -5,15 +5,15 @@
 }
 
 .dropdown {
-    width: 70%;
+    width: 300px;
     background-color: #fff;
     display: flex;
     justify-content: center;
-    
 }
 
 @media(max-width: 974px) {
     .dropdown {
-        height: 70%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
     }
 }

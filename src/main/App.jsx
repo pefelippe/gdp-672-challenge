@@ -19,5 +19,3 @@ export default function App() {
         </div>
     )
 }
-
-{/* <CardContainer countryCode = { countryCode } countriesDict = {countriesDict} startDate = {startDate} endDate = {endDate}/> */ }

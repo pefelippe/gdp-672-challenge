@@ -5,7 +5,7 @@ import '../styles/Header.css'
 export default function Header() {
     return (
         <header className="header">
-            <h1>Covid-19 Status</h1>
+            <span>Covid-19 Status</span>
         </header>
     )
 }

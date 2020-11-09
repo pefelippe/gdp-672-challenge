@@ -1,14 +1,13 @@
 .card {
-    margin-bottom: 10px;
     width: 300px;
     height: 250px;
-    background-color: #fff;
+    background-color: #f8f8f8;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-
+    border-radius: 10px;
 }
 
 .type {
@@ -18,22 +17,22 @@
 
 .numberCases {
     font-size: 30px;
-
 }
 
 .description {
-    font-size: 10px;
-    color: 	#808080;
+    font-size: 12px;
+    color: #808080;
 }
 
 @media(max-width: 974px) {
+    .card {
+        margin-top: 10px;
+    }
     .type {
         padding: 10px;
         font-size: 25px;
     }
     .numberCases {
         font-size: 20px;
-
     }
-  }
-  
+}

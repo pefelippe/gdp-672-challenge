@@ -1,17 +1,18 @@
 
 import React from 'react'
 
-import '../styles/Card.css'
-
 import CountUp from 'react-countup';
+
+import '../styles/Card.css'
 
 export default function Cards(props) {
 
-    let { name, Number, label } = props
+    let { name, Number, label, country } = props
 
     return (
         <div className="card">
-            <h1 className= "type">{name}</h1>
+            <span className="type"> {name} </span>
+            <span>{country}</span>
             <h2 className="numberCases">
                 {Number &&
                     <CountUp
@@ -19,9 +20,9 @@ export default function Cards(props) {
                         end={Number} />
                 }
             </h2>
-            <h2 className = "description">
-                {label}
-            </h2>
+            <span className="description">
+                <i>{label}</i>
+            </span>
         </div>
     )
 }
