@@ -1,19 +1,28 @@
-# Covid-19 Status :mask:
+# :mask: Covid-19 Status :mask:
 
-Hi! this is a simple challenge for the #GDP-672 and #GDP-671 job positions at Instituto Atlântico. This challenge consists of reproducing data from a <a href= "https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#intro">public API</a> on a ReactJS web app
+Hi! this is a simple challenge for the #GDP-672 and #GDP-671 job positions at Instituto Atlântico. This challenge consists of reproducing data from a <a href= "https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#intro">public API</a> on a ReactJS web app.
 
-In this app you can see the number of <b>confirmed cases, recovered cases and deaths</b> caused by Covid-19.
+In this app you can see the number of :
+- <b>confirmed cases of Covid-19
+- recovered cases from Covid-19
+- deaths caused by Covid-19.</b> 
 
-You should be able to specify a Country or choose to see Worldwide.
-Also, you can select a range of days to check for cases that occurred during the range.
+You are able to specify by a <b>specific Country</b> or view <b>Worldwide</b>.
 
-<p align="center">Don't forget to check on <a href="https://pefelippe.github.io/gdp-672-challenge/">Github Pages</a>.<p>
+In addition, you should be able to choose a <b>specific time interval</b>.
 
-## Technologies used
+<b><p align="center">Don't forget to check on <a href="https://pefelippe.github.io/gdp-672-challenge/">Github Pages</a>.<p></b>
+
+## You will find
 - React
 - Node
 - MaterialUI
-- JSX
+
+Also:
+
+- < JSX />
+- (props) => {props.FunctionalComponents}
+- a lot of 'useEffect' and 'useState'
 
 ## Installation
 ```
@@ -33,4 +42,4 @@ Also, you can select a range of days to check for cases that occurred during the
     npm run deploy
 ```
 
-<p align="center"> <b>Remember: Wear a Mask. Save a life. Bye.</b> :mask:</p>
+<p align="center"> <b>Remember: Wear a Mask. Save a life. That's it, Bye.</b> :grin:</p>
